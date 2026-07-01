@@ -7,6 +7,11 @@ public class Mentoria extends Conteudo{
     private int cargaHoraria;
     private LocalDate data;
 
+    @Override
+    public double calcularXp(){
+        return Xp_padrao + 20d;
+    }
+
     public int getCargaHoraria() {
         return cargaHoraria;
     }
@@ -26,8 +31,8 @@ public class Mentoria extends Conteudo{
     @Override
     public String toString() {
         return "Mentoria{" +
-                "nome='" + nome + '\'' +
-                ", descicao='" + descicao + '\'' +
+                "nome='" + getNome() +
+                ", descicao='" + getDescicao() +
                 ", cargaHoraria=" + cargaHoraria +
                 ", data=" + data +
                 '}';

@@ -1,7 +1,8 @@
 package br.com.desafio.dominio;
 
-public class Conteudo {
+public abstract class Conteudo {
 
+    protected final double Xp_padrao = 10d;
     protected String nome;
     protected String descicao;
 
@@ -20,4 +21,5 @@ public class Conteudo {
     public void setDescicao(String descicao) {
         this.descicao = descicao;
     }
+    public abstract double calcularXp();
 }
